@@ -3,8 +3,14 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      transitionDuration: {
+        
+        '10000': '10000ms',
+       }
+    },
   },
   plugins: [],
 }

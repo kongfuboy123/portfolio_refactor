@@ -1,10 +1,16 @@
-
-
+import {useState} from 'react'
+import Nav from "./components/Nav";
+import {Routes, Route} from "react-router-dom";
+import Home from "./pages/Home";
 function App() {
+  const [dark,setDark]=useState(false);
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className={dark?"dark":''}>
+      <Nav props={{dark,setDark}}/>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </div>
   );
 }
 
